@@ -13,6 +13,13 @@ API used : https://api.weatherstack.com/current?access_key=${access_token}&query
 * city = "city name" to fetch details based on query parameter
 
 
+### 
+Deployed link : https://adaptnxt-weather-backend.onrender.com/weather?query=london
+
+### 
+Github link:https://github.com/rjreddy111/adaptNXT_weather_backend.git
+
+
 
 
 

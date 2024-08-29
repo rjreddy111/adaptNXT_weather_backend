@@ -9,17 +9,16 @@ const access_token = "6c7a3da2449cbe2b5682d1ab2047132e"
 
 app.get("/weather", async(request,response)=> {
     
-    const cityObject = request.query
-    console.log(cityObject)
+    
 
-   let  city = request.query.query 
-         city  = encodeURIComponent(city)
+   let  city = request.query.name 
+        
    console.log(city)
-
+   
    if (!city) {
-    return response.status(400).send({error:"City is required"})
+        return response.status(400).send({error:"City name is required"})
    }
-
+  
    
 
 
@@ -35,11 +34,12 @@ app.get("/weather", async(request,response)=> {
 
       //* we can destrcuture  object and use  
       
-      const {location: {country,lat,lon,region,localtime,timezone_id,utc_offset}, 
+      const {location: {name,country,lat,lon,region,localtime,timezone_id,utc_offset}, 
         current : {temperature,wind_speed,wind_dir,pressure,humidity,cloudcover,feelslike,visibility,is_day,weather_icons,weather_descriptions}
     } = data 
      response.json({
         location: {
+            cityName:name,
             country, 
             latitude:lat,
             longitude:lon, 
