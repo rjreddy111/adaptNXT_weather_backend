@@ -14,7 +14,7 @@ API used : https://api.weatherstack.com/current?access_key=${access_token}&query
 
 
 ### 
-Deployed link : https://adaptnxt-weather-backend.onrender.com/weather?query=london
+Deployed link : https://adaptnxt-weather-backend.onrender.com/weather?name=london
 
 ### 
 Github link:https://github.com/rjreddy111/adaptNXT_weather_backend.git
